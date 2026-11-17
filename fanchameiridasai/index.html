@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>反差 每日大赛-主题创作赛与评选观察</title>
+<meta name="description" content="反差 每日大赛是一个围绕反差主题的每日创作赛事与作品评选栏目，跟踪每日赛题、入围名单、评审规则变化、参赛者经验与争议回应，提供可核对的赛程时间、票数区间与作品条目索引，帮助读者看懂每一轮评选依据。">
+<meta name="keywords" content="反差 每日大赛">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231b2a4a'/%3E%3Cpath d='M7 22 L14 9 L18 16 L25 8' stroke='%23f2b441' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='25' cy='24' r='3' fill='%23e8604c'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"反差 每日大赛","description":"围绕反差主题的每日创作赛事与作品评选栏目","inLanguage":"zh-CN"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"反差 每日大赛的赛题每天几点公布？","acceptedAnswer":{"@type":"Answer","text":"赛题在每天10:00发布于赛事公告区，11月1日至11月8日期间均按此时间执行，11月5日因评审组内部校准推迟至10:40。"}},
+{"@type":"Question","name":"每日大赛的反差主题指什么范围？","acceptedAnswer":{"@type":"Answer","text":"指同一作品内部存在两种可辨识的反向特征，例如色彩明暗、体量大小、身份反差或材质软硬，评审表第3条要求两组特征需同时可见。"}},
+{"@type":"Question","name":"入围作品票数如何核对？","acceptedAnswer":{"@type":"Answer","text":"每轮入围页公开有效投票数与弃权票数，11月3日至11月7日的七轮入围票数区间为412票到1896票。"}},
+{"@type":"Question","name":"落选后能否申请复核？","acceptedAnswer":{"@type":"Answer","text":"可在结果公布后24小时内提交复核申请，需附作品编号与具体争议点，评审组在48小时内回复，11月已有9份复核申请获受理。"}},
+{"@type":"Question","name":"参赛者能否重复提交同一作品？","acceptedAnswer":{"@type":"Answer","text":"不能。规则第7条规定同一作品编号只能进入一轮评比，改版需重新编号并注明修订说明。"}}
+]}
+</script>
+<style>
+:root{
+  --ink:#1b2a4a;--ink-2:#3c4a66;--paper:#f7f5f0;--card:#ffffff;
+  --accent:#e8604c;--accent-2:#f2b441;--teal:#2f7d7a;
+  --line:#dfd9cd;--muted:#6c7484;
+  --fs-h1:clamp(1.7rem,4.2vw,2.7rem);
+  --fs-h2:clamp(1.25rem,2.6vw,1.55rem);
+  --fs-body:1rem;--lh:1.85;
+  --sp-1:.4rem;--sp-2:.8rem;--sp-3:1.2rem;--sp-4:1.8rem;--sp-5:2.8rem;
+  --r-s:6px;--r-m:12px;--r-l:20px;
+  --sh:0 2px 10px rgba(27,42,74,.07);
+  --sticky-h:96px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--sticky-h) + 14px)}
+body{margin:0;font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:var(--paper);color:var(--ink);font-size:var(--fs-body);line-height:var(--lh)}
+a{color:var(--ink);text-decoration:none}
+a:hover{color:var(--accent)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px;border-radius:4px}
+h1,h2,h3{line-height:1.35;margin:0 0 var(--sp-2)}
+p{margin:0 0 var(--sp-3)}
+.wrap{width:min(1180px,94vw);margin:0 auto}
+/* sticky top */
+.sticky-top{position:sticky;top:0;z-index:60}
+.notice{background:var(--ink);color:#f4efe3;font-size:.82rem;padding:.45rem 0}
+.notice .wrap{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+.notice b{color:var(--accent-2);font-weight:600}
+.notice a{color:#ffd9a0}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block}
+header.site{background:rgba(247,245,240,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;gap:var(--sp-3);padding:.7rem 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.55rem;font-weight:700;font-size:1.05rem;letter-spacing:.02em}
+.brand svg{width:34px;height:34px;flex:none}
+nav.main{display:flex;gap:.15rem;margin-left:auto;flex-wrap:wrap}
+nav.main a{padding:.4rem .6rem;border-radius:var(--r-s);font-size:.9rem;color:var(--ink-2)}
+nav.main a:hover,nav.main a.active{background:#eae4d8;color:var(--ink)}
+.head-tools{display:flex;gap:.5rem;align-items:center}
+.search{display:flex;border:1px solid var(--line);background:#fff;border-radius:var(--r-s);overflow:hidden}
+.search input{border:0;padding:.42rem .6rem;font-size:.85rem;width:150px;background:transparent;color:var(--ink)}
+.search button{border:0;background:var(--ink);color:#fff;padding:.42rem .7rem;font-size:.85rem;cursor:pointer}
+.search button:hover{background:var(--accent)}
+.menu-btn{display:none;border:1px solid var(--line);background:#fff;border-radius:var(--r-s);padding:.42rem .6rem;font-size:.85rem;cursor:pointer;color:var(--ink)}
+#searchMsg{font-size:.82rem;color:var(--accent);padding:.2rem 0;display:none}
+/* hero */
+.hero{padding:var(--sp-5) 0 var(--sp-4);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:var(--sp-4);align-items:center}
+.kicker{display:inline-flex;gap:.4rem;align-items:center;font-size:.78rem;letter-spacing:.18em;color:var(--teal);border:1px solid var(--teal);padding:.2rem .55rem;border-radius:999px;margin-bottom:var(--sp-2)}
+h1{font-size:var(--fs-h1);letter-spacing:.01em}
+.hero p.lead{font-size:1.02rem;color:var(--ink-2);max-width:34em}
+.cta{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:var(--sp-2)}
+.btn{display:inline-block;padding:.6rem 1.15rem;border-radius:var(--r-s);font-size:.92rem;border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer}
+.btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:#eae4d8;color:var(--ink)}
+.hero-facts{display:flex;gap:var(--sp-4);margin-top:var(--sp-3);flex-wrap:wrap}
+.hero-facts div{font-size:.8rem;color:var(--muted)}
+.hero-facts strong{display:block;font-size:1.18rem;color:var(--ink);font-variant-numeric:tabular-nums}
+.art{position:relative;height:320px}
+.art svg{width:100%;height:100%}
+/* section bases */
+section{padding:var(--sp-5) 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+.sec-head{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;margin-bottom:var(--sp-3)}
+.sec-head h2{font-size:var(--fs-h2);margin:0}
+.sec-head .sub{font-size:.84rem;color:var(--muted)}
+.chip{display:inline-block;font-size:.76rem;padding:.15rem .55rem;border-radius:999px;background:#eae4d8;color:var(--ink-2)}
+.chip.accent{background:#fbe3dd;color:#a83a28}
+.chip.teal{background:#d9ebe9;color:#1f5f5c}
+/* cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3)}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-4)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:var(--sp-3);box-shadow:var(--sh);transition:transform .18s ease}
+.card:hover{transform:translateY(-3px)}
+.card h3{font-size:1rem;margin:0 0 .35rem}
+.card p{font-size:.88rem;color:var(--ink-2);margin:0}
+.card .meta{font-size:.76rem;color:var(--muted);margin-bottom:.5rem}
+.card img{width:100%;height:132px;object-fit:cover;border-radius:var(--r-s);margin-bottom:.6rem;display:block}
+.card.feature{grid-column:span 2;display:grid;grid-template-columns:180px 1fr;gap:var(--sp-3);padding:var(--sp-3)}
+.card.feature img{height:100%;margin:0}
+.card.feature h3{font-size:1.12rem}
+.tagrow{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.5rem}
+.tag{font-size:.74rem;border:1px solid var(--line);border-radius:999px;padding:.1rem .5rem;color:var(--ink-2);background:#fbfaf7}
+.tag:hover{border-color:var(--accent);color:var(--accent)}
+/* list */
+.list{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden;box-shadow:var(--sh)}
+.list li{list-style:none;display:grid;grid-template-columns:74px 1fr auto;gap:.8rem;padding:.8rem var(--sp-3);border-bottom:1px solid var(--line);align-items:baseline}
+.list li:last-child{border-bottom:0}
+.list .date{font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.list .ttl{font-size:.92rem}
+.list .from{font-size:.74rem;color:var(--muted);white-space:nowrap}
+.list ul{margin:0;padding:0}
+/* steps */
+.steps{counter-reset:s;display:grid;gap:var(--sp-2)}
+.step{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent-2);border-radius:var(--r-s);padding:var(--sp-2) var(--sp-3);display:grid;grid-template-columns:auto 1fr;gap:.8rem;align-items:start}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-weight:700;color:var(--accent);font-size:.9rem;font-variant-numeric:tabular-nums;padding-top:.1rem}
+.step h3{font-size:.95rem;margin:0 0 .2rem}
+.step p{font-size:.85rem;margin:0;color:var(--ink-2)}
+/* compare */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden;background:var(--card)}
+.compare>div{padding:var(--sp-3)}
+.compare>div:first-child{border-right:1px solid var(--line);background:#fbf7ef}
+.compare h3{font-size:.95rem;margin:0 0 .6rem;display:flex;align-items:center;gap:.4rem}
+.compare ul{margin:0;padding-left:1.1rem}
+.compare li{font-size:.86rem;margin-bottom:.45rem;color:var(--ink-2)}
+/* article */
+.article{display:grid;grid-template-columns:2.2fr 1fr;gap:var(--sp-4)}
+.prose h3{font-size:1.05rem;margin-top:var(--sp-4)}
+.prose h3:first-child{margin-top:0}
+.prose p{color:var(--ink-2);font-size:.94rem}
+.pullquote{border-left:4px solid var(--accent);background:#fbf7ef;padding:var(--sp-2) var(--sp-3);border-radius:0 var(--r-s) var(--r-s) 0;margin:var(--sp-3) 0;font-size:.96rem;color:var(--ink)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-m);background:var(--card);margin:var(--sp-3) 0}
+table{border-collapse:collapse;width:100%;font-size:.85rem;min-width:440px}
+th,td{padding:.55rem .7rem;border-bottom:1px solid var(--line);text-align:left}
+th{background:#f1ece1;font-weight:600}
+td.num{font-variant-numeric:tabular-nums}
+.aside-stack{display:grid;gap:var(--sp-3);align-content:start}
+.side-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:var(--sp-3);box-shadow:var(--sh)}
+.side-card h3{font-size:.95rem;margin:0 0 .6rem}
+.side-card ul{margin:0;padding:0}
+.side-card li{list-style:none;font-size:.86rem;padding:.35rem 0;border-bottom:1px dashed var(--line)}
+.side-card li:last-child{border-bottom:0}
+/* FAQ */
+details{background:var(--card);border:1px solid var(--line);border-radius:var(--r-s);padding:.7rem var(--sp-3);margin-bottom:.6rem}
+details summary{cursor:pointer;font-size:.93rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";color:var(--accent);font-weight:400;font-size:1.1rem}
+details[open] summary::after{content:"–"}
+details p{font-size:.87rem;color:var(--ink-2);margin:.6rem 0 0}
+/* comments */
+.cmt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-3)}
+.cmt{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:var(--sp-3)}
+.cmt .who{font-size:.8rem;color:var(--muted);display:flex;gap:.5rem;align-items:center;margin-bottom:.4rem}
+.avatar{width:24px;height:24px;border-radius:50%;background:var(--teal);color:#fff;font-size:.7rem;display:grid;place-items:center;flex:none}
+.avatar.b{background:var(--accent)}
+.avatar.c{background:var(--accent-2);color:var(--ink)}
+.cmt p{font-size:.87rem;margin:0;color:var(--ink)}
+/* timeline */
+.timeline{list-style:none;margin:0;padding:0;border-left:3px solid var(--line);margin-left:.6rem}
+.timeline li{position:relative;padding:0 0 var(--sp-3) var(--sp-3)}
+.timeline li::before{content:"";position:absolute;left:-9px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--accent-2);border:3px solid var(--paper)}
+.timeline .t{font-size:.76rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.timeline h3{font-size:.94rem;margin:.1rem 0 .2rem}
+.timeline p{font-size:.85rem;margin:0;color:var(--ink-2)}
+/* ranking */
+.rank{list-style:none;margin:0;padding:0;counter-reset:r}
+.rank li{counter-increment:r;display:grid;grid-template-columns:34px 1fr auto;gap:.7rem;align-items:center;padding:.65rem 0;border-bottom:1px solid var(--line)}
+.rank li::before{content:counter(r);font-weight:700;color:var(--accent);font-size:1rem;font-variant-numeric:tabular-nums}
+.rank .name{font-size:.9rem}
+.rank .score{font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+/* footer */
+footer{background:var(--ink);color:#cfd6e4;padding:var(--sp-5) 0 var(--sp-3);font-size:.85rem}
+footer a{color:#e7ecf5}
+footer a:hover{color:var(--accent-2)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--sp-4)}
+.foot-brand{display:flex;align-items:center;gap:.5rem;color:#fff;font-weight:700;margin-bottom:.6rem;font-size:1rem}
+.foot-brand svg{width:26px;height:26px}
+footer h3{font-size:.86rem;color:#fff;margin:0 0 .6rem;letter-spacing:.05em}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin-bottom:.4rem}
+.foot-note{border-top:1px solid #33415f;margin-top:var(--sp-4);padding-top:var(--sp-3);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:#93a0b8;font-size:.78rem}
+/* back to top */
+#toTop{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:1rem;cursor:pointer;box-shadow:var(--sh);display:none;z-index:70}
+#toTop.show{display:block}
+#toTop:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (max-width:980px){
+  :root{--sticky-h:132px}
+  .hero-grid{grid-template-columns:1fr}
+  .art{height:230px;order:-1}
+  .grid3{grid-template-columns:repeat(2,1fr)}
+  .card.feature{grid-column:span 2}
+  .article{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .cmp,.compare{grid-template-columns:1fr}
+  .compare>div:first-child{border-right:0;border-bottom:1px solid var(--line)}
+}
+@media (max-width:720px){
+  :root{--sticky-h:150px}
+  nav.main{display:none;width:100%;order:5}
+  nav.main.open{display:flex}
+  nav.main a{flex:1 1 auto;text-align:center;border:1px solid var(--line);background:#fff}
+  .menu-btn{display:inline-block;margin-left:auto}
+  .head-tools{order:4;width:100%}
+  .search{flex:1}
+  .search input{width:100%}
+  .grid3,.grid2,.cmt-grid{grid-template-columns:1fr}
+  .card.feature{grid-column:span 1;grid-template-columns:1fr}
+  .card.feature img{height:150px}
+  .list li{grid-template-columns:64px 1fr}
+  .list .from{display:none}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-facts{gap:var(--sp-3)}
+  section{padding:var(--sp-4) 0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .card:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-top">
+  <div class="notice">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <b>反差 每日大赛</b>
+      <span>第 312 轮赛题「冷暖同框」已公布；11 月 7 日入围名单 26 件，复核受理 9 份；赛程表更新至 11 月 8 日 09:20。</span>
+      <a href="/#updates">查看更新</a>
+    </div>
+  </div>
+  <header class="site">
+    <div class="wrap head-in">
+      <a class="brand" href="/#top" aria-label="反差 每日大赛 首页">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#1b2a4a"/><path d="M8 28 L18 11 L23 20 L32 9" stroke="#f2b441" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="31" cy="30" r="4" fill="#e8604c"/></svg>
+        <span>反差 每日大赛</span>
+      </a>
+      <nav class="main" id="mainNav" aria-label="主题导航">
+        <a href="/#overview">赛制概览</a>
+        <a href="/#picked">今日精选</a>
+        <a href="/#updates">赛程更新</a>
+        <a href="/#channels">题材分类</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">参赛指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#talk">评论</a>
+      </nav>
+      <div class="head-tools">
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">菜单</button>
+        <form class="search" id="searchForm" role="search" aria-label="站内搜索">
+          <input type="search" id="q" placeholder="搜作品、赛题、参赛者" aria-label="搜索关键词">
+          <button type="submit">查找</button>
+        </form>
+      </div>
+      <div id="searchMsg" role="status" aria-live="polite"></div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">DAY 312 · 每轮一题</span>
+        <h1 id="h1">反差 每日大赛</h1>
+        <p class="lead">同一个画面里放两种相反的东西——冷与暖、大与小、静与闹。每天上午 10 点公布一道赛题，当天 21 点截稿，次日 12 点出入围名单。11 月前七轮平均收稿 187 件，入围率 13.6%。</p>
+        <div class="cta">
+          <a class="btn" href="/#picked">看本轮入围</a>
+          <a class="btn ghost" href="/#guide">参赛流程</a>
+        </div>
+        <div class="hero-facts">
+          <div><strong>312</strong>已办轮次</div>
+          <div><strong>1,309</strong>累计参赛者</div>
+          <div><strong>4.2 万</strong>累计有效投票</div>
+          <div><strong>13.6%</strong>近七轮入围率</div>
+        </div>
+      </div>
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 420 320" role="img">
+          <defs>
+            <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f2b441"/><stop offset="1" stop-color="#e8604c"/>
+            </linearGradient>
+            <linearGradient id="gB" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#2f7d7a"/><stop offset="1" stop-color="#1b2a4a"/>
+            </linearGradient>
+          </defs>
+          <rect x="10" y="20" width="186" height="280" rx="16" fill="url(#gA)" opacity=".92"/>
+          <rect x="222" y="20" width="186" height="280" rx="16" fill="url(#gB)" opacity=".94"/>
+          <circle cx="104" cy="112" r="42" fill="#fff8e6" opacity=".85"/>
+          <rect x="268" y="170" width="94" height="94" rx="8" fill="#e7ecf5" opacity=".24"/>
+          <path d="M240 78 L300 78 L270 140 Z" fill="#f7f5f0" opacity=".8"/>
+          <path d="M62 236 L146 236 M62 254 L118 254" stroke="#fff8e6" stroke-width="7" stroke-linecap="round" opacity=".85"/>
+          <circle cx="315" cy="106" r="26" fill="none" stroke="#f2b441" stroke-width="5" opacity=".9"/>
+          <path d="M196 20 L196 300" stroke="#f7f5f0" stroke-width="3" stroke-dasharray="8 8" opacity=".65"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="overview" aria-labelledby="ovh">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="ovh">赛制概览：一天一轮的评比结构</h2>
+        <span class="sub">数据截至 11 月 8 日 09:20</span>
+      </div>
+      <div class="grid3">
+        <article class="card">
+          <div class="meta">规则 · 第 7 版</div>
+          <h3>单轮四阶段</h3>
+          <p>10:00 发题，21:00 截稿，次日 09:00 评审打分，12:00 公布入围 25—30 件。每阶段在公告区留时间戳，可逐条回溯。</p>
+        </article>
+        <article class="card">
+          <div class="meta">评审 · 5 人小组</div>
+          <h3>打分表三项权重</h3>
+          <p>反差成立度 50 分、完成度 30 分、原创性 20 分，去掉最高与最低分后取均值。11 月 4 日起原创性一项改为需附过程图。</p>
+        </article>
+        <article class="card">
+          <div class="meta">投票 · 大众轮</div>
+          <h3>每日投票上限</h3>
+          <p>同一账号每轮 3 票，不可投给同一作品。11 月 3 日至 7 日五轮共录得有效票 9,846 张，弃权票 412 张另列。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="picked" aria-labelledby="pch">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="pch">今日精选：第 312 轮「冷暖同框」入围</h2>
+        <span class="sub">截稿 11 月 8 日 21:00 · 入围 11 月 9 日 12:00</span>
+      </div>
+      <div class="grid3">
+        <article class="card feature">
+          <img src="https://picsum.photos/seed/fancha312a/360/300" width="360" height="300" loading="lazy" alt="左侧暖橘灯光与右侧冷蓝墙面对半分割的室内构图">
+          <div>
+            <div class="meta">编号 A-2207 · 参赛者「半扇窗」· 11 月 7 日 14:32 提交</div>
+            <h3>半间暖房：一盏台灯照进冷色地下室</h3>
+            <p>第 311 轮「一半烟火」的延伸思路。评审初评 86.5 分，反差成立度拿满 50 分，完成度因右下角杂物略扣 4 分。过程图 3 张，包含布光位置与原片直方图。</p>
+            <div class="tagrow"><a class="tag" href="/#channels">冷暖对比</a><a class="tag" href="/#deep">布光还原</a><a class="tag" href="/#talk">评论 17 条</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/fancha312b/360/300" width="360" height="300" loading="lazy" alt="巨大手掌模型与微型街景模型并置的桌面">
+          <div class="meta">编号 A-2211 · 参赛者「尺规」· 11 月 7 日 18:05 提交</div>
+          <h3>巨手与微城：比例反差的三次试拍</h3>
+          <p>用 1:87 的铁道模型配石膏手掌，第一次因景深过浅失败，第三次把光圈收到 f/16 才让两端都清晰。评审给出 84 分。</p>
+          <div class="tagrow"><a class="tag" href="/#channels">大小反差</a><a class="tag" href="/#guide">景深控制</a></div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/fancha312c/360/300" width="360" height="300" loading="lazy" alt="穿正装的人蹲在菜市场塑料筐旁择菜">
+          <div class="meta">编号 A-2219 · 参赛者「早市阿岚」· 11 月 8 日 07:41 提交</div>
+          <h3>西装与菜筐：身份反差的一张纪实</h3>
+          <p>拍摄对象是社区合唱团指挥，周末替母亲看摊。作者附了 120 字背景说明，评审提示：说明文字不能替代画面信息，最终 81 分。</p>
+          <div class="tagrow"><a class="tag" href="/#channels">身份反差</a><a class="tag" href="/#talk">争议 6 条</a></div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/fancha312d/360/300" width="360" height="300" loading="lazy" alt="锋利刀片旁放着蓬松棉花糖的特写">
+          <div class="meta">编号 A-2224 · 参赛者「糖霜」· 11 月 8 日 09:12 提交</div>
+          <h3>刀锋与棉絮：材质反差的安全提示</h3>
+          <p>道具为未开刃的展示刀，拍摄前在公告区报备。反差成立度 46 分，评审认为两者接触面不足，画面张力弱于同轮 A-2207。</p>
+          <div class="tagrow"><a class="tag" href="/#channels">材质反差</a><a class="tag" href="/#faq">道具报备</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="updates" aria-labelledby="uph">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="uph">赛程更新：近七轮时间与结果</h2>
+        <span class="sub">时间均为北京时间</span>
+      </div>
+      <div class="list">
+        <ul>
+          <li><span class="date">11-08</span><span class="ttl">第 312 轮赛题「冷暖同框」10:00 发布，截稿 21:00</span><span class="from">公告区</span></li>
+          <li><span class="date">11-07</span><span class="ttl">第 311 轮入围 28 件公布，主题「一半烟火」，最高 89.2 分</span><span class="from">评审组</span></li>
+          <li><span class="date">11-06</span><span class="ttl">原创性一项改为须附过程图，涉及第 308 轮起的全部作品补交</span><span class="from">规则第 7 版</span></li>
+          <li><span class="date">11-05</span><span class="ttl">第 309 轮发题推迟至 10:40，评审组说明为内部校准，未影响截稿</span><span class="from">公告区</span></li>
+          <li><span class="date">11-04</span><span class="ttl">第 308 轮复核受理 4 份，其中 1 件 B-1903 由落选补入入围</span><span class="from">复核记录</span></li>
+          <li><span class="date">11-03</span><span class="ttl">第 307 轮大众投票 1,896 张，为 11 月单轮最高</span><span class="from">投票统计</span></li>
+          <li><span class="date">11-02</span><span class="ttl">第 306 轮主题「新与旧」，参赛者「旧站台」以老式挂钟配电子屏获头名</span><span class="from">评审组</span></li>
+          <li><span class="date">11-01</span><span class="ttl">11 月赛季开榜，月度积分规则沿用 10 月版，前 10 名进入年度总评</span><span class="from">赛季公告</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="channels" aria-labelledby="chh">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="chh">题材分类：反差常被拆成的八个方向</h2>
+        <span class="sub">点选进入对应标签页</span>
+      </div>
+      <div class="grid3">
+        <a class="card" href="/#picked"><h3>冷暖对比</h3><p>色温对撞，蓝青与橙黄同框。11 月出现 62 件，占全部投稿 23.7%。</p></a>
+        <a class="card" href="/#picked"><h3>大小反差</h3><p>微缩模型配真实物件，靠景深与参照物说清比例。A-2211 为典型。</p></a>
+        <a class="card" href="/#picked"><h3>身份反差</h3><p>职业与场景错位。评审提醒：背景说明不能当画面证据。</p></a>
+        <a class="card" href="/#picked"><h3>材质反差</h3><p>硬与软、糙与滑。需报备刀具等道具，11 月已受理 5 份报备。</p></a>
+        <a class="card" href="/#deep"><h3>动静反差</h3><p>长曝光下的人流与静物，快门 1/4 秒到 8 秒都有人试。</p></a>
+        <a class="card" href="/#deep"><h3>明暗反差</h3><p>高光与暗部同时保留，考核直方图两端是否截断。</p></a>
+        <a class="card" href="/#talk"><h3>新旧反差</h3><p>老物件配新设备，第 306 轮头名即此路数。</p></a>
+        <a class="card" href="/#faq"><h3>虚实反差</h3><p>实拍与投影、倒影互文。规则未单列，按原创性项评估。</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="deep" aria-labelledby="dph">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="dph">深度解析：反差题材为什么容易在评分表上失分</h2>
+        <span class="sub">对照第 305—311 轮共 196 件入围作品</span>
+      </div>
+      <div class="article">
+        <div class="prose">
+          <h3>一、两项特征必须同时可辨，不是「有反差就算」</h3>
+          <p>11 月 6 日启用的规则第 7 版把「反差成立度」从 40 分提到 50 分，评审表第 3 条写成「同一画面须同时可辨两组反向特征」。第 307 轮 A-1988 只有冷色调墙面，暖色仅出现在画面边缘 3% 的区域，评委「石桥」在意见里写：需要观众读说明才知道意图，不算成立。该件最终 63 分落选。</p>
+          <div class="tablewrap">
+            <table>
+              <caption style="caption-side:top;text-align:left;font-size:.8rem;color:#6c7484;padding:.4rem .7rem">第 305—311 轮三档作品的分数分布</caption>
+              <thead><tr><th>档位</th><th>入围件数</th><th>反差成立度均值</th><th>完成度均值</th></tr></thead>
+              <tbody>
+                <tr><td>入围前 5</td><td class="num">12</td><td class="num">47.3</td><td class="num">27.1</td></tr>
+                <tr><td>入围后段</td><td class="num">24</td><td class="num">41.6</td><td class="num">24.8</td></tr>
+                <tr><td>落选复核件</td><td class="num">9</td><td class="num">33.2</td><td class="num">22.4</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>三档差距主要落在第一项。完成度在后两档之间只差 2.4 分，说明落选者并非拍得糙，而是反差这一核心项没立住。</p>
+
+          <h3>二、过程图规则改变了投稿结构</h3>
+          <p>11 月 4 日公告要求原创性项附过程图，11 月 6 日扩大到第 308 轮起全部作品。对比 10 月 28 日至 11 月 2 日的五轮与 11 月 3 日至 7 日的五轮：前者平均收稿 213 件，后者 158 件，降幅 25.8%。同期重复提交被驳回 31 次，规则第 7 条「同一编号只进一轮」被引用 19 次。</p>
+          <p>参赛者「尺规」在评论区说，补过程图要额外 40 分钟，他因此放弃了 11 月 5 日和 6 日两轮。这不是个别情况：11 月 6 日当晚 20:00 至 21:00 的提交量比前一日同时段少 47 件。</p>
+
+          <h3>三、大众投票与评审打分在身份反差题材上分歧最大</h3>
+          <p>把 11 月 3 日至 7 日五轮拆开看：冷暖与材质题材的投票排名与评审排名平均相差 2.1 位；身份反差题材平均相差 5.6 位。第 311 轮 A-2219「西装与菜筐」大众票排第 2，评审排第 11，分差 8 分。</p>
+          <div class="pullquote">可被反驳的判断：身份反差的高票未必来自画面本身，更多来自说明文字提供的故事。若把 A-2219 的 120 字说明撤掉，同一批评审的打分中位数预计下降 5—7 分。这一估计来自评审意见里三次提到「说明先行」，尚无盲评数据支撑。</div>
+          <p>要核对这个说法，可以看 11 月 9 日第 312 轮的盲评试点：公告称本轮评审第一遍不看说明文字，只看画面，第二遍再开放说明。两遍分数差会直接给出答案。</p>
+
+          <h3>四、评分表里有一处结构性缺口</h3>
+          <p>反差成立度 50 分、完成度 30 分、原创性 20 分，三项都没有衡量「反差是否服务于表达」。第 306 轮头名 B-1755 用老式挂钟配电子屏，反差清楚、完成度高，但评委「南屿」在意见中写：两块屏幕只是并排，没有产生新的意思。该件仍以 88.4 分居首。</p>
+          <p>这说明评分表奖励可辨识的反差，未必奖励有意义的反差。参赛者若按分数优化，会把资源投在对比强度上。第 310 轮有 9 件作品在画面里同时塞入三种以上反差，评审复核时以「堆叠」为由扣分，最少的一件只拿 71 分。</p>
+        </div>
+        <aside class="aside-stack" aria-label="深度解析辅助信息">
+          <div class="side-card">
+            <h3>可核对的三项数据</h3>
+            <ul>
+              <li>规则第 7 版启用日：11 月 6 日</li>
+              <li>过程图要求覆盖轮次：第 308 轮起</li>
+              <li>身份反差票评名次平均差：5.6 位</li>
+            </ul>
+          </div>
+          <div class="side-card">
+            <h3>盲评试点安排</h3>
+            <ul>
+              <li>第一遍：仅看画面，11 月 9 日 09:00—10:30</li>
+              <li>第二遍：开放说明，11 月 9 日 10:30—11:30</li>
+              <li>两遍分差于 12:00 随入围名单公布</li>
+            </ul>
+          </div>
+          <div class="side-card">
+            <h3>相关观察</h3>
+            <ul>
+              <li><a href="/#updates">第 309 轮发题推迟 40 分钟</a></li>
+              <li><a href="/#picked">A-2207 布光过程图 3 张</a></li>
+              <li><a href="/#talk">「糖霜」对材质反差的回应</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide" aria-labelledby="guh">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="guh">体验指南：从读题到提交的五个动作</h2>
+        <span class="sub">按 11 月 8 日时间表排列</span>
+      </div>
+      <div class="steps">
+        <div class="step"><div><h3>10:00 读题，先写下两组反向特征</h3><p>赛题通常一句短语，例如「冷暖同框」。动笔前把两组特征各写一个具体名词：暖光是台灯，冷面是水泥墙。写不出名词的题目，换角度。</p></div></div>
+        <div class="step"><div><h3>10:30—14:00 拍第一版，留过程图</h3><p>第 308 轮起原创性项需过程图，建议至少 3 张：布光位置、原片直方图、关键参数。A-2207 的三张过程图在入围页可查。</p></div></div>
+        <div class="step"><div><h3>14:00—18:00 自查反差成立度</h3><p>把照片给不了解赛题的人看 10 秒，问看到哪两种相反的东西。答不出或只答出一种，回到第 1 步。第 307 轮 63 分作品就卡在这里。</p></div></div>
+        <div class="step"><div><h3>18:00—20:30 报备道具与肖像授权</h3><p>刀具、明火、他人正面肖像需在公告区报备，11 月已受理 5 份道具报备。身份反差题材涉及真人，须取得口头同意并记录。</p></div></div>
+        <div class="step"><div><h3>21:00 截稿前提交，核对编号</h3><p>同一编号只进一轮，改版须重新编号并写明修订。11 月以来因编号重复被驳回 31 次，占总驳回数 46%。</p></div></div>
+      </div>
+      <div class="compare" style="margin-top:var(--sp-4)">
+        <div>
+          <h3><span class="chip teal">容易入围</span>画面自己说话</h3>
+          <ul>
+            <li>两组特征各占画面 20% 以上面积</li>
+            <li>有第三方参照物说明比例或色温</li>
+            <li>过程图能对上最终画面的布光</li>
+            <li>说明文字 100 字以内讲清拍摄条件</li>
+          </ul>
+        </div>
+        <div>
+          <h3><span class="chip accent">常见失分</span>需要读说明才成立</h3>
+          <ul>
+            <li>暖色只在画面边缘出现</li>
+            <li>用文字解释「其实左边是冷的」</li>
+            <li>过程图与成片参数不一致</li>
+            <li>一件作品塞三种以上反差被判堆叠</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rank" aria-labelledby="rkh">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="rkh">11 月积分榜：前八名与代表作</h2>
+        <span class="sub">积分 = 入围 3 分 + 单轮前五 5 分 + 头名 10 分</span>
+      </div>
+      <div class="grid2">
+        <div>
+          <ol class="rank">
+            <li><span class="name">旧站台 · 第 306 轮头名 B-1755</span><span class="score">28 分</span></li>
+            <li><span class="name">半扇窗 · 第 311 轮 A-2207</span><span class="score">25 分</span></li>
+            <li><span class="name">石桥 · 连续 4 轮入围</span><span class="score">22 分</span></li>
+            <li><span class="name">尺规 · 第 312 轮 A-2211</span><span class="score">19 分</span></li>
+          </ol>
+        </div>
+        <div>
+          <ol class="rank" start="5" style="counter-reset:r 4">
+            <li><span class="name">早市阿岚 · 第 312 轮 A-2219</span><span class="score">17 分</span></li>
+            <li><span class="name">南屿 · 评审，非参赛者</span><span class="score">—</span></li>
+            <li><span class="name">糖霜 · 第 312 轮 A-2224</span><span class="score">14 分</span></li>
+            <li><span class="name">旧胶片 · 第 310 轮 B-1614</span><span class="score">12 分</span></li>
+          </ol>
+        </div>
+      </div>
+      <div class="timeline" style="margin-top:var(--sp-4)">
+        <h3 style="font-size:1rem">11 月关键节点</h3>
+        <ul class="timeline" style="border-left-color:#e8604c">
+          <li><span class="t">11 月 1 日</span><h3>赛季开榜</h3><p>月度积分沿用 10 月版，前 10 名进入年度总评。</p></li>
+          <li><span class="t">11 月 6 日</span><h3>过程图全覆盖</h3><p>第 308 轮起全部作品补交过程图，收稿量随即下降 25.8%。</p></li>
+          <li><span class="t">11 月 9 日</span><h3>盲评试点</h3><p>第 312 轮两遍打分，两遍分差随入围名单公布。</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="fqh">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="fqh">常见问题：赛题、投票与复核</h2>
+        <span class="sub">答案按规则第 7 版与公告区记录整理</span>
+      </div>
+      <details open>
+        <summary>赛题每天几点公布？11 月有推迟过吗？</summary>
+        <p>赛题在每天 10:00 发布于赛事公告区。11 月 1 日至 11 月 8 日仅 11 月 5 日推迟到 10:40，评审组说明为内部校准，当日截稿仍为 21:00，未顺延。</p>
+      </details>
+      <details>
+        <summary>反差主题具体指什么范围？</summary>
+        <p>指同一作品内部存在两种可辨识的反向特征，例如色彩明暗、体量大小、身份错位或材质软硬。评审表第 3 条要求两组特征需同时可见，不能靠说明文字补足。第 307 轮 A-1988 即因暖色只占边缘 3% 而落选。</p>
+      </details>
+      <details>
+        <summary>入围票数怎么核对？</summary>
+        <p>每轮入围页公开有效投票数与弃权票数。11 月 3 日至 11 月 7 日七轮入围票数区间为 412 票到 1,896 票，第 307 轮最高。大众投票与评审打分分开统计，两套名次都在入围页列出。</p>
+      </details>
+      <details>
+        <summary>落选后能否申请复核？</summary>
+        <p>可在结果公布后 24 小时内提交复核申请，需附作品编号与具体争议点，评审组在 48 小时内回复。11 月已有 9 份复核申请获受理，其中第 308 轮 B-1903 由落选补入入围。</p>
+      </details>
+      <details>
+        <summary>同一作品能否重复提交？</summary>
+        <p>不能。规则第 7 条规定同一作品编号只能进入一轮评比，改版需重新编号并注明修订说明。11 月以来因编号重复被驳回 31 次，占总驳回数的 46%。</p>
+      </details>
+      <details>
+        <summary>使用刀具或明火道具要报备吗？</summary>
+        <p>要。刀具、明火、他人正面肖像均需在公告区报备，说明拍摄时间与安全措施。11 月已受理 5 份道具报备，A-2224 的展示刀即为报备件。未报备的争议内容在复核阶段会被要求补交。</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="talk" aria-labelledby="tkh">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="tkh">用户评论：关于第 312 轮和最近几轮</h2>
+        <span class="sub">按发布时间排列，含不同立场</span>
+      </div>
+      <div class="cmt-grid">
+        <div class="cmt">
+          <div class="who"><span class="avatar">半</span>半扇窗 · 11-08 11:02</div>
+          <p>A-2207 的右下角杂物我认了，拍的时候是自家地下室，没清干净。评审扣 4 分我想问一句：清理杂物会不会反而让冷暖对比显得太干净、太假？</p>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="avatar b">尺</span>尺规 · 11-08 10:48</div>
+          <p>过程图这规则确实劝退。11 月 5 日、6 日我都没交，光是补直方图就要 40 分钟。但 A-2211 那张巨手微城能入围，过程图里第三次试拍的参数说明帮了忙，这点我不否认。</p>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="avatar c">路</span>路过看榜 · 11-08 09:56</div>
+          <p>A-2219 西装菜筐那张，我第一眼以为摆拍。后来看到拍摄对象是合唱团指挥，周末替母亲看摊，观感变了。这不代表画面成立，只是说明文字确实在起作用。</p>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="avatar">糖</span>糖霜 · 11-07 22:14</div>
+          <p>刀锋与棉絮 46 分，认。不过「两者接触面不足」这条评语有点含糊，展台间距 2 厘米，我试过贴紧，棉花糖会粘刀。希望评审把「接触面」写成可量的标准。</p>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="avatar b">石</span>石桥 · 11-07 20:31</div>
+          <p>作为评审说一句：A-1988 那轮我们三个人意见一致，暖色只占边缘 3%，观众要读说明才知道意图。有人觉得严，但 50 分的反差成立度就是要卡这个。</p>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="avatar c">旧</span>旧胶片 · 11-07 18:20</div>
+          <p>第 310 轮我塞了四种反差，被说堆叠，71 分。回头看确实什么都想放，冷暖、大小、动静全有，结果一样都没说清。这轮我只拍一种，两个名词写清楚再动手。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" aria-labelledby="nwh">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="nwh">相关资讯：赛制之外的几条动态</h2>
+        <span class="sub">含外部来源与公告原文措辞</span>
+      </div>
+      <div class="grid3">
+        <article class="card">
+          <div class="meta">公告区 · 11-06</div>
+          <h3>过程图要求扩大到全部作品</h3>
+          <p>公告原句为「自第 308 轮起，所有提交须附不少于两张过程图」。此前仅要求原创性项可疑的作品补交。</p>
+        </article>
+        <article class="card">
+          <div class="meta">评审会议纪要 · 11-04</div>
+          <h3>复核受理流程缩短到 48 小时</h3>
+          <p>此前回复时限为 72 小时。11 月 4 日 B-1903 复核案在 36 小时内完成，成为新时限后的首例。</p>
+        </article>
+        <article class="card">
+          <div class="meta">参赛者群 · 11-02</div>
+          <h3>老式挂钟配电子屏的布光被反复讨论</h3>
+          <p>第 306 轮头名 B-1755 在群内公开了布光草图，两块屏亮度差 3 档，用黑旗遮住反光。讨论集中在「反差是否需要解释」。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="rec" aria-labelledby="rch">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="rch">相关推荐：按题材检索的入口</h2>
+        <span class="sub">标签直接对应频道</span>
+      </div>
+      <div class="card" style="padding:var(--sp-3)">
+        <div class="tagrow" style="margin:0">
+          <a class="tag" href="/#channels">冷暖对比作品</a>
+          <a class="tag" href="/#channels">大小反差布光</a>
+          <a class="tag" href="/#channels">身份反差纪实</a>
+          <a class="tag" href="/#channels">材质反差道具</a>
+          <a class="tag" href="/#deep">动静反差长曝光</a>
+          <a class="tag" href="/#deep">明暗反差直方图</a>
+          <a class="tag" href="/#guide">过程图拍摄方法</a>
+          <a class="tag" href="/#guide">道具报备清单</a>
+          <a class="tag" href="/#faq">复核申请模板</a>
+          <a class="tag" href="/#rank">11 月积分榜</a>
+          <a class="tag" href="/#talk">评审意见摘录</a>
+          <a class="tag" href="/#updates">第 312 轮时间表</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#f2b441"/><path d="M8 28 L18 11 L23 20 L32 9" stroke="#1b2a4a" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="31" cy="30" r="4" fill="#e8604c"/></svg>
+          <span>反差 每日大赛</span>
+        </div>
+        <p style="color:#b9c3d6;max-width:24em">每天一道赛题，当天截稿，次日公布入围，记录每一轮的分数、票数与评审意见。</p>
+      </div>
+      <div>
+        <h3>赛事栏目</h3>
+        <ul>
+          <li><a href="/#overview">赛制概览</a></li>
+          <li><a href="/#updates">赛程更新</a></li>
+          <li><a href="/#rank">积分榜</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>作品与题材</h3>
+        <ul>
+          <li><a href="/#picked">今日精选</a></li>
+          <li><a href="/#channels">题材分类</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>参与</h3>
+        <ul>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#talk">用户评论</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>页面内作品编号、参赛者昵称、票数与分数为示例数据，用于展示评比结构；规则条款与时间以赛事公告区原文为准。</span>
+      <span>更新于 2026-11-08，对应正文「赛程更新」与「深度解析」两处可核对条目。</span>
+    </div>
+    <div class="foot-note" style="border-top:none;margin-top:.6rem;padding-top:0">
+      <span>© 2026 反差 每日大赛 内容组</span>
+      <span>建议在关闭 JavaScript 的情况下阅读核心赛制与解析</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var nav=document.getElementById('mainNav');
+  menuBtn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  nav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'&&window.matchMedia('(max-width:720px)').matches){
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+    }
+  });
+  var form=document.getElementById('searchForm');
+  var q=document.getElementById('q');
+  var msg=document.getElementById('searchMsg');
+  var sections=[].slice.call(document.querySelectorAll('main section'));
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var key=q.value.trim().toLowerCase();
+    if(!key){msg.style.display='none';return;}
+    var hit=null;
+    for(var i=0;i<sections.length;i++){
+      if(sections[i].textContent.toLowerCase().indexOf(key)>-1){hit=sections[i];break;}
+    }
+    if(hit){
+      msg.style.display='none';
+      hit.scrollIntoView({behavior:'smooth',block:'start'});
+      hit.style.transition='background .4s';
+      hit.style.background='#fbe3dd';
+      setTimeout(function(){hit.style.background='';},1400);
+    }else{
+      msg.textContent='未找到与「'+q.value.trim()+'」相关的板块，试试「冷暖」「过程图」「复核」「积分」。';
+      msg.style.display='block';
+    }
+  });
+  var toTop=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>520){toTop.classList.add('show');}else{toTop.classList.remove('show');}
+  },{passive:true});
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+  var links=[].slice.call(nav.querySelectorAll('a'));
+  var secIds=links.map(function(a){return a.getAttribute('href').replace('/#','');});
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        var id=en.target.id;
+        links.forEach(function(a){
+          a.classList.toggle('active',a.getAttribute('href')==='/'+'#'+id);
+        });
+      }
+    });
+  },{rootMargin:'-30% 0px -60% 0px'});
+  secIds.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el){obs.observe(el);}
+  });
+})();
+</script>
+</body>
+</html>
