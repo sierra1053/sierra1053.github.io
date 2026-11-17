@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>全球黑网-网红爆料与账号生态观察</title>
+<meta name="description" content="全球黑网聚焦网红爆料与账号生态，梳理带货翻车、数据造假、MCN 合约纠纷与平台处罚记录，附时间线、可核对清单与读者评论，供关注网络内容行业的人按条目查证。">
+<meta name="keywords" content="全球黑网">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101418'/%3E%3Cpath d='M14 44 L26 18 L38 44 Z' fill='none' stroke='%23e0b252' stroke-width='3'/%3E%3Ccircle cx='45' cy='26' r='9' fill='none' stroke='%23d9524a' stroke-width='3'/%3E%3Cpath d='M41 42 h16' stroke='%23e0b252' stroke-width='3'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#12161b;
+  --ink-2:#1b222a;
+  --paper:#f4f1ea;
+  --paper-2:#e9e4d8;
+  --line:#cfc7b5;
+  --line-dark:#3a434d;
+  --gold:#c99a3c;
+  --gold-soft:#e0b252;
+  --red:#b8443c;
+  --teal:#2f6f6a;
+  --txt:#20262d;
+  --txt-soft:#5b6570;
+  --shadow:0 2px 0 var(--line), 0 10px 24px -18px rgba(18,22,27,.55);
+  --r:6px;
+  --sp:clamp(14px,2vw,22px);
+  --stick:96px;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--txt);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  font-size:16px;line-height:1.78;
+}
+h1,h2,h3,h4{font-family:"Songti SC","SimSun",Georgia,serif;line-height:1.32;margin:0}
+a{color:var(--teal);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--sp)}
+.skip{position:absolute;left:-999px;top:0;background:var(--gold-soft);color:#12161b;padding:8px 14px;z-index:200}
+.skip:focus{left:8px;top:8px}
+
+/* sticky stack */
+.stickstack{position:sticky;top:0;z-index:60;box-shadow:0 8px 18px -16px rgba(0,0,0,.7)}
+.notice{
+  background:var(--ink);color:#e8e3d6;font-size:13.5px;
+  display:flex;gap:12px;align-items:center;padding:7px var(--sp);
+  border-bottom:1px solid var(--line-dark);
+}
+.notice .tag{background:var(--red);color:#fff;font-size:12px;padding:1px 7px;border-radius:2px;letter-spacing:.06em;flex:none}
+.notice p{margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.notice a{color:var(--gold-soft)}
+header.site{
+  background:rgba(244,241,234,.97);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.hbar{display:flex;align-items:center;gap:18px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);flex:none}
+.brand:hover{text-decoration:none}
+.brand svg{width:36px;height:36px}
+.brand b{font-family:"Songti SC","SimSun",serif;font-size:20px;letter-spacing:.04em}
+.nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:8px}
+.nav a{
+  color:var(--txt);font-size:14.5px;padding:5px 9px;border-radius:var(--r);
+}
+.nav a:hover{background:var(--paper-2);text-decoration:none}
+.search{margin-left:auto;display:flex;align-items:center;gap:6px}
+.search input{
+  width:180px;padding:7px 10px;border:1px solid var(--line);border-radius:var(--r);
+  background:#fff;font-size:14px;font-family:inherit;color:var(--txt);
+}
+.search button{
+  border:1px solid var(--ink);background:var(--ink);color:#f2eee3;
+  padding:7px 12px;border-radius:var(--r);font-size:14px;cursor:pointer;font-family:inherit;
+}
+.search button:hover{background:var(--ink-2)}
+.menubtn{display:none;background:none;border:1px solid var(--line);border-radius:var(--r);padding:6px 10px;font-size:14px;cursor:pointer;font-family:inherit;color:var(--txt)}
+#searchmsg{font-size:13px;color:var(--red);margin:0 0 6px;display:none}
+[hidden]{display:none !important}
+
+/* hero */
+.hero{
+  background:
+    radial-gradient(900px 320px at 85% -10%, rgba(201,154,60,.16), transparent 70%),
+    var(--ink);
+  color:#eceae2;border-bottom:3px solid var(--gold);
+  position:relative;overflow:hidden;
+}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:36px;align-items:center;padding-top:44px;padding-bottom:40px}
+.hero .kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.18em;color:var(--gold-soft);border:1px solid rgba(224,178,82,.45);padding:3px 10px;border-radius:2px}
+.hero h1{font-size:clamp(30px,4.6vw,50px);margin:16px 0 10px;color:#fbf9f2;letter-spacing:.03em}
+.hero .lede{font-size:16.5px;color:#cfd3d6;max-width:44ch;margin:0 0 22px}
+.hero .lede b{color:#fff;font-weight:600}
+.cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{
+  display:inline-block;padding:10px 18px;border-radius:var(--r);font-size:15px;
+  background:var(--gold-soft);color:#1a1408;border:1px solid var(--gold-soft);font-weight:600;
+}
+.btn:hover{text-decoration:none;background:#ecc468;transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:#e9e4d6;border-color:#6c7480;font-weight:400}
+.btn.ghost:hover{background:rgba(255,255,255,.07)}
+.hero .figs{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap}
+.hero .figs div{font-size:12.5px;color:#a9b0b6;letter-spacing:.04em}
+.hero .figs b{display:block;font-size:24px;color:#f2ece0;font-family:"Songti SC",serif;letter-spacing:0}
+.heroart{position:relative;justify-self:end;width:100%;max-width:420px}
+.heroart svg{width:100%;height:auto}
+
+/* sections */
+main{display:block}
+section{padding:44px 0;border-bottom:1px solid var(--line);scroll-margin-top:var(--stick)}
+section:last-of-type{border-bottom:0}
+.shead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.shead h2{font-size:clamp(21px,2.6vw,27px);color:var(--ink)}
+.shead h2 small{display:block;font-size:13px;font-family:inherit;color:var(--txt-soft);letter-spacing:.04em;margin-top:4px;font-weight:400}
+.shead .more{font-size:13.5px;color:var(--txt-soft);border-bottom:1px dotted var(--line);padding-bottom:1px}
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{
+  background:#fbf9f3;border:1px solid var(--line);border-radius:var(--r);
+  padding:18px 18px 16px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 2px 0 var(--line),0 16px 26px -18px rgba(18,22,27,.6)}
+.card .meta{font-size:12.5px;color:var(--txt-soft);letter-spacing:.03em}
+.card h3{font-size:17.5px;color:var(--ink)}
+.card p{margin:0;font-size:14.8px;color:#3d454d}
+.card .thumb{border-radius:4px;overflow:hidden;border:1px solid var(--line)}
+.card .thumb img{width:100%;height:150px;object-fit:cover}
+
+/* lists */
+ul.tight{list-style:none;margin:0;padding:0}
+ul.tight li{
+  display:grid;grid-template-columns:74px 1fr;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line);
+  font-size:15px;
+}
+ul.tight li:last-child{border-bottom:0}
+ul.tight .when{font-size:12.5px;color:var(--txt-soft);font-variant-numeric:tabular-nums;padding-top:2px}
+ul.tight .what b{color:var(--ink);font-weight:600}
+ul.tight .what span{color:var(--txt-soft);font-size:13.5px;display:block}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:4px}
+.chips a{
+  font-size:14px;padding:6px 13px;border:1px solid var(--line);border-radius:20px;
+  background:#fbf9f3;color:var(--txt);
+}
+.chips a:hover{border-color:var(--gold);background:#fffdf6;text-decoration:none}
+.chips a em{font-style:normal;font-size:12px;color:var(--txt-soft);margin-left:6px}
+
+/* analysis article */
+.analysis{max-width:760px}
+.analysis h3{font-size:19px;margin:26px 0 8px;color:var(--ink);border-left:4px solid var(--gold);padding-left:10px}
+.analysis p{margin:0 0 10px}
+.callout{
+  border:1px solid var(--line);border-left:5px solid var(--red);background:#fdf8ef;
+  padding:14px 16px;border-radius:0 var(--r) var(--r) 0;margin:16px 0;font-size:14.8px;
+}
+.callout b{color:var(--red)}
+.checktable{width:100%;border-collapse:collapse;font-size:14px;margin:10px 0 4px;background:#fbf9f3}
+.checktable caption{text-align:left;font-size:13px;color:var(--txt-soft);padding-bottom:6px}
+.checktable th,.checktable td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.checktable th{background:var(--paper-2);font-weight:600;font-size:13.5px;color:var(--ink)}
+.checktable td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* steps */
+ol.steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;gap:14px}
+ol.steps li{
+  counter-increment:s;position:relative;padding:14px 16px 14px 58px;
+  background:#fbf9f3;border:1px solid var(--line);border-radius:var(--r);
+}
+ol.steps li::before{
+  content:counter(s,decimal-leading-zero);position:absolute;left:14px;top:13px;
+  font-family:"Songti SC",serif;font-size:19px;color:var(--gold);font-weight:700;
+}
+ol.steps li b{display:block;color:var(--ink);font-size:15.5px;margin-bottom:2px}
+ol.steps li p{margin:0;font-size:14.5px;color:#3d454d}
+
+/* faq */
+details.faq{border:1px solid var(--line);border-radius:var(--r);background:#fbf9f3;margin-bottom:10px;padding:0 16px}
+details.faq summary{cursor:pointer;padding:13px 0;font-weight:600;color:var(--ink);font-size:15.5px;list-style:none}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::before{content:"＋";color:var(--gold);margin-right:9px;font-weight:700}
+details.faq[open] summary::before{content:"－"}
+details.faq .ans{padding:0 0 14px 24px;font-size:14.8px;color:#3d454d}
+
+/* comments */
+.cmts{display:grid;gap:14px}
+.cmt{background:#fbf9f3;border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.cmt .who{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--txt-soft);margin-bottom:6px}
+.cmt .av{width:28px;height:28px;border-radius:50%;background:var(--paper-2);border:1px solid var(--line);display:grid;place-items:center;font-size:12.5px;color:var(--ink);font-family:"Songti SC",serif}
+.cmt p{margin:0;font-size:14.8px;color:#343c44}
+.cmt .obj{color:var(--teal);border-bottom:1px dotted #9dbdb9}
+
+/* aside-ish panel */
+.panel{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.rank{list-style:none;margin:0;padding:0;counter-reset:r}
+.rank li{counter-increment:r;display:grid;grid-template-columns:26px 1fr auto;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14.6px;align-items:baseline}
+.rank li:last-child{border-bottom:0}
+.rank li::before{content:counter(r);color:var(--gold);font-weight:700;font-family:"Songti SC",serif}
+.rank .v{font-size:13px;color:var(--txt-soft);font-variant-numeric:tabular-nums}
+
+blockquote.quote{
+  margin:0;padding:20px 22px;border:1px solid var(--line);background:#fdfbf4;border-radius:var(--r);
+  font-family:"Songti SC",serif;font-size:17px;color:var(--ink);position:relative;
+}
+blockquote.quote::before{content:"“";position:absolute;left:6px;top:-6px;font-size:44px;color:var(--gold);opacity:.5}
+blockquote.quote footer{font-family:inherit;font-size:13px;color:var(--txt-soft);margin-top:10px}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 18px 16px;font-size:14.8px}
+.tl li::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--paper);border:2px solid var(--gold)}
+.tl li time{display:block;font-size:12.5px;color:var(--txt-soft);font-variant-numeric:tabular-nums}
+
+/* compare */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cmp>div{padding:16px;background:#fbf9f3}
+.cmp>div+div{border-left:1px solid var(--line)}
+.cmp h4{font-size:14px;letter-spacing:.06em;color:var(--txt-soft);margin-bottom:8px;font-weight:600}
+.cmp ul{margin:0;padding-left:18px;font-size:14.6px}
+.cmp li{margin-bottom:6px}
+
+/* footer */
+footer.site{background:var(--ink);color:#c9cbc6;padding:38px 0 26px;border-top:3px solid var(--gold);font-size:14px}
+footer.site .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
+footer.site h4{color:#f2ece0;font-size:15px;margin-bottom:10px;letter-spacing:.05em}
+footer.site a{color:#c9cbc6;font-size:14px;display:block;padding:3px 0}
+footer.site a:hover{color:var(--gold-soft);text-decoration:none}
+footer.site .fbrand{display:flex;align-items:center;gap:10px;color:#f2ece0;font-family:"Songti SC",serif;font-size:19px;margin-bottom:10px}
+footer.site .fbrand svg{width:30px;height:30px}
+footer.site p{margin:0 0 8px;color:#9aa1a6;line-height:1.7}
+.fbottom{border-top:1px solid var(--line-dark);margin-top:26px;padding-top:14px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#8d9499}
+
+#totop{
+  position:fixed;right:18px;bottom:22px;z-index:80;
+  background:var(--ink);color:#f2ece0;border:1px solid var(--line-dark);border-radius:var(--r);
+  padding:9px 13px;font-size:13.5px;cursor:pointer;font-family:inherit;opacity:0;pointer-events:none;
+  transition:opacity .2s ease,transform .2s ease;transform:translateY(6px);
+  box-shadow:0 8px 20px -12px rgba(0,0,0,.8);
+}
+#totop.show{opacity:1;pointer-events:auto;transform:none}
+#totop:hover{background:var(--ink-2)}
+
+@media (max-width:960px){
+  .hero .wrap{grid-template-columns:1fr;gap:24px}
+  .heroart{justify-self:start;max-width:340px}
+  .g3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  footer.site .fgrid{grid-template-columns:1fr 1fr}
+  .search input{width:150px}
+}
+@media (max-width:720px){
+  :root{--stick:104px}
+  .hbar{flex-wrap:wrap;gap:10px}
+  .menubtn{display:inline-block;order:3}
+  .search{margin-left:auto;order:2}
+  .nav{order:4;display:none;width:100%;flex-direction:column;gap:0;border-top:1px solid var(--line);padding-top:8px}
+  .nav.open{display:flex}
+  .nav a{padding:9px 4px;border-bottom:1px dashed var(--line);border-radius:0;font-size:15px}
+  .g3,.g2,.cmp{grid-template-columns:1fr}
+  .cmp>div+div{border-left:0;border-top:1px solid var(--line)}
+  ul.tight li{grid-template-columns:1fr;gap:2px}
+  .notice p{white-space:normal;font-size:13px}
+  section{padding:32px 0}
+  footer.site .fgrid{grid-template-columns:1fr}
+  #totop{right:12px;bottom:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important;animation:none !important}
+  .card:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要栏目</a>
+
+<div class="stickstack">
+  <div class="notice" role="region" aria-label="更新公告">
+    <span class="tag">更新</span>
+    <p>11月7日新增：抖音账号“阿岚的衣帽间”11月3日直播退货率截图与品牌方回应全文；快手“老范探吃”停更 17 天时间线补录。 <a href="/#latest">查看最新更新 →</a></p>
+  </div>
+  <header class="site">
+    <div class="wrap hbar">
+      <a class="brand" href="/#top" aria-label="全球黑网 首页">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#12161b"/><path d="M13 45 L26 17 L39 45 Z" fill="none" stroke="#e0b252" stroke-width="3"/><circle cx="47" cy="25" r="9" fill="none" stroke="#b8443c" stroke-width="3"/><path d="M41 43 h18" stroke="#e0b252" stroke-width="3"/></svg>
+        <b>全球黑网</b>
+      </a>
+      <button class="menubtn" id="menuBtn" aria-expanded="false" aria-controls="nav" type="button">频道 ▾</button>
+      <nav class="nav" id="nav" aria-label="主题导航">
+        <a href="/#overview">行业概览</a>
+        <a href="/#picks">精选爆料</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#channels">频道索引</a>
+        <a href="/#analysis">深度解析</a>
+        <a href="/#guide">查证指南</a>
+        <a href="/#faq">常见问题</a>
+      </nav>
+      <form class="search" id="searchForm" role="search" onsubmit="return false">
+        <label for="q" class="skip">站内搜索</label>
+        <input id="q" type="search" placeholder="搜账号、品牌、平台" autocomplete="off">
+        <button type="submit" id="searchBtn">查找</button>
+      </form>
+    </div>
+    <div class="wrap"><p id="searchmsg" role="status" aria-live="polite"></p></div>
+  </header>
+</div>
+
+<main id="main">
+  <section class="hero" id="top" style="border-bottom:3px solid var(--gold)">
+    <div class="wrap">
+      <div>
+        <span class="kicker">账号生态 · 记录与核对</span>
+        <h1>全球黑网</h1>
+        <p class="lede">把网红爆料拆成可以被翻出来的证据：截图出自哪个直播间、品牌公告哪天发布、平台处罚落在哪条规则上。这里按条目收录，不按情绪排序。</p>
+        <div class="cta">
+          <a class="btn" href="/#picks">看本周精选条目</a>
+          <a class="btn ghost" href="/#guide">先学怎么核对</a>
+        </div>
+        <div class="figs">
+          <div><b>312</b>条已归档爆料</div>
+          <div><b>46</b>个品牌与账号对照</div>
+          <div><b>2026-11-08</b>数据时点</div>
+        </div>
+      </div>
+      <div class="heroart" aria-hidden="true">
+        <svg viewBox="0 0 420 380" role="img" aria-label="抽象网格与证据节点构图">
+          <defs>
+            <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#2a333d"/><stop offset="1" stop-color="#161c22"/>
+            </linearGradient>
+          </defs>
+          <rect x="14" y="20" width="392" height="340" rx="10" fill="url(#hg)" stroke="#3a434d"/>
+          <g stroke="#3a434d" stroke-width="1">
+            <path d="M40 300 H380"/><path d="M40 250 H380"/><path d="M40 200 H380"/><path d="M40 150 H380"/>
+            <path d="M110 70 V330"/><path d="M200 70 V330"/><path d="M290 70 V330"/>
+          </g>
+          <g fill="#e0b252">
+            <circle cx="110" cy="250" r="5"/><circle cx="200" cy="150" r="5"/><circle cx="290" cy="200" r="5"/><circle cx="200" cy="300" r="4"/>
+          </g>
+          <path d="M110 250 L200 150 L290 200 L200 300" fill="none" stroke="#e0b252" stroke-width="2" stroke-dasharray="6 5"/>
+          <circle cx="290" cy="120" r="26" fill="none" stroke="#b8443c" stroke-width="2"/>
+          <path d="M276 106 L304 134 M304 106 L276 134" stroke="#b8443c" stroke-width="2"/>
+          <rect x="52" y="86" width="112" height="52" rx="4" fill="#1d242b" stroke="#4c565f"/>
+          <rect x="64" y="98" width="88" height="6" rx="3" fill="#c99a3c"/>
+          <rect x="64" y="112" width="62" height="5" rx="2" fill="#5d6771"/>
+          <rect x="64" y="124" width="76" height="5" rx="2" fill="#5d6771"/>
+          <rect x="252" y="256" width="118" height="62" rx="4" fill="#1d242b" stroke="#4c565f"/>
+          <path d="M266 300 L280 276 L294 300 Z" fill="none" stroke="#e0b252" stroke-width="2"/>
+          <rect x="302" y="278" width="54" height="5" rx="2" fill="#8b939a"/>
+          <rect x="302" y="290" width="40" height="5" rx="2" fill="#5d6771"/>
+          <rect x="302" y="302" width="48" height="5" rx="2" fill="#5d6771"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+
+    <section id="overview">
+      <div class="shead">
+        <h2>领域概览：网红爆料都在爆什么<small>按事件类型拆分，49 条来自平台公开处罚公告，其余来自品牌声明与直播回放</small></h2>
+        <a class="more" href="/#channels">按频道浏览 →</a>
+      </div>
+      <div class="grid g3">
+        <div class="card">
+          <div class="meta">带货履约 · 18 条</div>
+          <h3>直播退货率与坑位费争议</h3>
+          <p>品牌方公布的后台截图里，11 月 3 日“阿岚的衣帽间”一场女装专场成交 2140 单，签收后退货 1382 单。争议点在退货是否计入坑位费结算口径。</p>
+        </div>
+        <div class="card">
+          <div class="meta">数据真实性 · 11 条</div>
+          <h3>粉丝增长曲线异常判定</h3>
+          <p>短视频账号单日涨粉超过日常均值 8 倍、且集中在凌晨 1 点至 4 点时，第三方数据平台会标记为异常。标记不等于刷量，需结合评论区账号质量看。</p>
+        </div>
+        <div class="card">
+          <div class="meta">合约与分成 · 9 条</div>
+          <h3>MCN 解约与账号归属</h3>
+          <p>账号归属看注册手机号、实名信息与合同约定三处。10 月 28 日一起解约纠纷中，合同写“账号归机构”，但实名信息仍在主播本人名下。</p>
+        </div>
+        <div class="card">
+          <div class="meta">内容合规 · 7 条</div>
+          <h3>医疗、金融类口播违规</h3>
+          <p>涉及功效宣称的直播切片被平台下架，处罚依据多为《社区自律公约》中“虚假宣传”条款，通常先限流 7 天，再视复核结果处理。</p>
+        </div>
+        <div class="card">
+          <div class="meta">人设与私德 · 8 条</div>
+          <h3>身份信息与经历夸大</h3>
+          <p>学历、从业年限、获奖记录是最常被夸大的三项。核查路径分别是学信网、企业工商信息、赛事主办方公示名单。</p>
+        </div>
+        <div class="card">
+          <div class="meta">版权与搬运 · 6 条</div>
+          <h3>切片二创与素材授权</h3>
+          <p>直播切片二次剪辑的授权通常写在主播与机构的合同附件里，普通观众看到的“授权截图”多是沟通记录，不等同于书面许可。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="picks">
+      <div class="shead">
+        <h2>精选内容推荐<small>编辑按证据完整度挑的 3 条，附原始出处与时间</small></h2>
+        <a class="more" href="/#latest">看全部更新 →</a>
+      </div>
+      <div class="grid g3">
+        <article class="card">
+          <div class="thumb"><img src="https://picsum.photos/seed/heiwang-live-room/640/360" width="640" height="360" loading="lazy" alt="直播间后台订单与退货数据截图示意"></div>
+          <div class="meta">带货履约 · 2026-11-03</div>
+          <h3>阿岚的衣帽间退货率争议</h3>
+          <p>品牌方 11 月 5 日在小红书发布后台截图，显示退货率 64.6%。主播方 11 月 6 日回应称“退货含预售未发”，双方口径差在是否剔除未发货订单。</p>
+        </article>
+        <article class="card">
+          <div class="thumb"><img src="https://picsum.photos/seed/heiwang-fan-curve/640/360" width="640" height="360" loading="lazy" alt="账号粉丝增长折线与异常区间标注"></div>
+          <div class="meta">数据真实性 · 2026-10-29</div>
+          <h3>“老范探吃”凌晨涨粉 12 万</h3>
+          <p>第三方平台记录显示 10 月 27 日 2 时至 4 时涨粉 12.3 万，日常同期约 4000。账号运营方称是“同城页推荐”，未提供后台截图。</p>
+        </article>
+        <article class="card">
+          <div class="thumb"><img src="https://picsum.photos/seed/heiwang-contract/640/360" width="640" height="360" loading="lazy" alt="合同条款与账号实名信息对照示意图"></div>
+          <div class="meta">合约与分成 · 2026-10-28</div>
+          <h3>账号归属：合同写了但实名没改</h3>
+          <p>“糖糖手作”与机构解约，合同第 7 条写明账号归机构，实名认证仍是主播本人身份证。平台客服答复：实名变更需双方到场。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="latest">
+      <div class="shead">
+        <h2>最新更新<small>按时间倒序，每条只记一个动作</small></h2>
+        <a class="more" href="/#channels">按平台筛选 →</a>
+      </div>
+      <div class="grid g2">
+        <ul class="tight">
+          <li><span class="when">11-07</span><span class="what"><b>抖音“阿岚的衣帽间”</b>发布退货口径说明，称已剔除 9 月预售单<span>原文措辞：“未发货订单不计入履约退货”</span></span></li>
+          <li><span class="when">11-06</span><span class="what"><b>女装品牌“青梧”</b>公布坑位费结算单，单场 8 万元<span>结算单为图片，未附合同页</span></span></li>
+          <li><span class="when">11-05</span><span class="what"><b>快手“老范探吃”</b>停更第 17 天，主页简介改为“休整中”<span>此前日更为探店视频</span></span></li>
+          <li><span class="when">11-04</span><span class="what"><b>“糖糖手作”</b>新号开播，首场在线峰值 1.1 万<span>旧号粉丝 87 万，未迁移</span></span></li>
+          <li><span class="when">11-02</span><span class="what"><b>某美妆主播</b>直播切片因功效宣称被下架 3 条<span>平台显示“违反社区自律公约”</span></span></li>
+        </ul>
+        <div class="panel">
+          <h3 style="font-size:16px;margin-bottom:10px;color:var(--ink)">本周被查证最多的问题</h3>
+          <ol class="rank">
+            <li><span>直播退货率怎么算才公平</span><span class="v">118 次</span></li>
+            <li><span>凌晨涨粉能否判定刷量</span><span class="v">94 次</span></li>
+            <li><span>解约后账号归谁</span><span class="v">76 次</span></li>
+            <li><span>坑位费能不能退</span><span class="v">61 次</span></li>
+            <li><span>切片二创需要书面授权吗</span><span class="v">52 次</span></li>
+          </ol>
+          <p style="font-size:13px;color:var(--txt-soft);margin:12px 0 0">统计口径：站内搜索框 10 月 31 日至 11 月 6 日的关键词命中次数。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="channels">
+      <div class="shead">
+        <h2>频道索引<small>按平台、按问题、按证据类型三种进入方式</small></h2>
+      </div>
+      <div class="grid g3">
+        <div class="card">
+          <div class="meta">按平台</div>
+          <h3>平台处罚记录</h3>
+          <div class="chips">
+            <a href="/#latest">抖音处罚<em>19</em></a>
+            <a href="/#latest">快手处罚<em>11</em></a>
+            <a href="/#latest">小红书<em>8</em></a>
+            <a href="/#latest">视频号<em>6</em></a>
+            <a href="/#latest">淘宝直播<em>4</em></a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="meta">按问题</div>
+          <h3>常见爆料类型</h3>
+          <div class="chips">
+            <a href="/#picks">带货退货率<em>18</em></a>
+            <a href="/#picks">刷量涨粉<em>11</em></a>
+            <a href="/#picks">合约解约<em>9</em></a>
+            <a href="/#analysis">功效宣称<em>7</em></a>
+            <a href="/#guide">学历履历<em>6</em></a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="meta">按证据</div>
+          <h3>原始材料类型</h3>
+          <div class="chips">
+            <a href="/#guide">后台截图<em>54</em></a>
+            <a href="/#guide">平台公告<em>49</em></a>
+            <a href="/#guide">合同页<em>22</em></a>
+            <a href="/#guide">直播回放<em>31</em></a>
+            <a href="/#guide">品牌声明<em>37</em></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="analysis">
+      <div class="shead">
+        <h2>深度解析：退货率 64.6% 这个数字该不该信<small>把争议拆成四个可核对的中间环节</small></h2>
+      </div>
+      <article class="analysis">
+        <p>品牌方“青梧”在 11 月 5 日的小红书帖子里给出一个数字：专场成交 2140 单，签收后退货 1382 单，退货率 64.6%。主播“阿岚的衣帽间”在 11 月 7 日的说明里没有否认这个比值，只改了分母——剔掉 9 月预售、11 月才发的 520 单，分母变成 1620，退货率降到 53.2%。两个数都不是凭空来的，差别在“成交单”的定义。</p>
+
+        <div class="callout">
+          <b>可被反驳的判断：</b>这类纠纷里，退货率本身几乎没有解释力，有解释力的是“退货原因分布”。若 1382 单中超过六成是尺码不合与色差，问题在选品与详情页；若集中在下单后 2 小时内退款，更可能是脚本冲动下单或比价跳单。青梧没有公布原因分布。
+        </div>
+
+        <h3>中段一：口径差在哪一天生效</h3>
+        <p>青梧的后台截图取数时间是 11 月 5 日 10 时 12 分，阿岚的说明发于 11 月 7 日 19 时 40 分。两天里预售订单陆续发货，分母确实会变。青梧客服在评论区的回复原文是“以签收为准”，没有回应预售单如何处理。这一句“以签收为准”本身能推出：未签收的预售单不该进分母，那 64.6% 这个数就已经偏高。</p>
+
+        <h3>中段二：坑位费与退货率的结算关系</h3>
+        <p>8 万元坑位费的结算条款，青梧只公开了金额，没有公开是否约定保底 ROI。行业常见做法有两种：一是固定坑位费不随退货调整；二是按“确认收货金额”阶梯返还。前者下，退货率高低与品牌回款无关；后者下，64.6% 与 53.2% 会导出完全不同的返款额。缺这一页合同，争论没有落点。</p>
+
+        <table class="checktable">
+          <caption>四个可核对项，取自双方公开材料，2026-11-08 复核</caption>
+          <thead><tr><th>核对项</th><th>青梧口径</th><th>阿岚口径</th><th>能否独立验证</th></tr></thead>
+          <tbody>
+            <tr><td>成交单量</td><td class="num">2140</td><td class="num">1620</td><td>需后台原始导出</td></tr>
+            <tr><td>退货单量</td><td class="num">1382</td><td class="num">862</td><td>需物流签收记录</td></tr>
+            <tr><td>取数时间</td><td>11-05 10:12</td><td>11-07 19:40</td><td>截图时间戳可见</td></tr>
+            <tr><td>坑位费条款</td><td>未公开</td><td>未公开</td><td>不可验证</td></tr>
+          </tbody>
+        </table>
+
+        <h3>中段三：同平台另一场专场的对照</h3>
+        <p>10 月 30 日同平台女装专场“南枝”公开的退货率为 38.4%，成交 900 单。两个账号粉丝量级接近，直播时长分别是 5 小时与 4.5 小时。差 26 个百分点，可能来自客单价（青梧 289 元，南枝 159 元）与是否含预售。客单价越高，退货决策越慢，取数窗口就越关键。</p>
+
+        <h3>中段四：平台规则怎么定性</h3>
+        <p>抖音《电商创作者管理总则》2026 年 9 月修订版对“虚假交易”的界定包含“引导退款后重新下单”，但对单纯高退货率没有处罚条款。也就是说，退货率高不构成平台层面的违规，只影响品牌方的合作决策。把高退货率直接说成“刷单”，是越过规则的推断。</p>
+
+        <p>把四段拼起来，能站住的结论只有一条：在坑位费条款与退货原因分布公开之前，64.6% 是一个口径未闭合的数字。它能作为谈判筹码，不足以作为指控依据。</p>
+      </article>
+    </section>
+
+    <section id="guide">
+      <div class="shead">
+        <h2>体验指南：拿到一张爆料截图先做四件事<small>按顺序做，能筛掉大部分无法证实的材料</small></h2>
+      </div>
+      <div class="grid g2">
+        <ol class="steps">
+          <li><b>看时间戳是否落在被指控的时间段内</b><p>直播间后台截图左上角通常有日期与场次编号。截图时间晚于场次 3 天以上，多半是事后导出，需再要一次实时录屏。</p></li>
+          <li><b>拆分母</b><p>成交单、支付单、签收单是三个不同数字。看到退货率先问除以的是哪一个，预售单算不算。这一问能解释一半以上的口径争议。</p></li>
+          <li><b>查平台公告编号</b><p>平台处罚一般有公示链接与处理编号。没有编号的“已被封禁”说法，只能算转述。</p></li>
+          <li><b>比对账号实名与合同</b><p>解约纠纷里，注册手机号、实名身份证、合同归属条款三项至少看两项。只看合同条款容易得出单边结论。</p></li>
+        </ol>
+        <div>
+          <div class="cmp">
+            <div>
+              <h4>可作为证据</h4>
+              <ul>
+                <li>平台处罚公示页与处理编号</li>
+                <li>直播回放原片（非剪辑切片）</li>
+                <li>带时间戳的后台导出文件</li>
+                <li>加盖公章的合同扫描页</li>
+              </ul>
+            </div>
+            <div>
+              <h4>只能算转述</h4>
+              <ul>
+                <li>聊天记录截屏（可单方拼接）</li>
+                <li>第三方数据平台估算值</li>
+                <li>匿名投稿的“内部员工说”</li>
+                <li>无出处的粉丝数对比图</li>
+              </ul>
+            </div>
+          </div>
+          <blockquote class="quote" style="margin-top:16px">
+            查证工作里最费时间的不是找证据，是确认这张截图的取数时间。
+            <footer>—— 一位做品牌投放的从业者，2026-11-01 站内访谈</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline">
+      <div class="shead">
+        <h2>事件时间线：青梧专场从开播到口径分裂<small>14 天内发生的公开动作</small></h2>
+      </div>
+      <div class="grid g2">
+        <ul class="tl">
+          <li><time>2026-10-25</time>青梧官宣 11 月 3 日专场，主播“阿岚的衣帽间”，预告 SKU 46 个。</li>
+          <li><time>2026-11-03 20:00</time>专场开播，直播时长 5 小时 12 分，峰值在线 3.4 万。</li>
+          <li><time>2026-11-05 10:12</time>青梧发布后台截图，退货率 64.6%，当日未提坑位费。</li>
+          <li><time>2026-11-06 09:30</time>青梧补充公布坑位费 8 万元，称“将重新评估合作名单”。</li>
+        </ul>
+        <ul class="tl">
+          <li><time>2026-11-07 19:40</time>阿岚发布说明，提出剔除预售单后的 53.2%，要求青梧公开退货原因分布。</li>
+          <li><time>2026-11-08 上午</time>双方均未再发新材料，评论区出现“刷单”指控，无平台公告支撑。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="shead">
+        <h2>常见问题<small>答案指向具体规则与操作，不评价当事人</small></h2>
+      </div>
+      <details class="faq">
+        <summary>直播退货率多少算异常？</summary>
+        <div class="ans">女装类目行业公开区间多在 30% 至 50%，超过 60% 值得追问，但单一数字不构成异常判定。要看退货原因：尺码不合、色差属于商品与详情页问题；下单后两小时内集中退款，更可能来自价格对比或冲动下单。平台规则里没有退货率红线，处罚只针对虚假交易。</div>
+      </details>
+      <details class="faq">
+        <summary>凌晨涨粉 12 万一定是刷量吗？</summary>
+        <div class="ans">不一定。同城页推荐、平台活动流量包、大号连麦都可能带来夜间集中涨粉。判定刷量的常见辅助证据是新增粉丝的账号质量：无头像、零作品、注册时间集中在同一天。只有涨粉曲线而没有粉丝质量样本时，只能标记为“待核”。</div>
+      </details>
+      <details class="faq">
+        <summary>解约后账号到底归谁？</summary>
+        <div class="ans">账号归属由三层决定：平台实名认证信息、注册手机号控制权、合同中的归属条款。三者冲突时，平台通常以实名信息为准办理变更，但变更需要双方配合。合同写归机构而实名未变更的，机构往往只能主张违约赔偿，拿不回账号控制权。</div>
+      </details>
+      <details class="faq">
+        <summary>坑位费在退货后能退吗？</summary>
+        <div class="ans">取决于合同是否约定保底条款。固定坑位费模式下，退货不触发返还；阶梯返还模式下，按确认收货金额计算返还比例。签约时没写返还机制的，事后主张退款缺少合同依据，只能走协商。</div>
+      </details>
+      <details class="faq">
+        <summary>直播切片二创需要书面授权吗？</summary>
+        <div class="ans">需要。主播与机构的合同附件通常约定切片使用范围，口头同意或聊天记录里的“可以剪”不等于书面许可。平台投诉时，版权方提交权属证明即可要求下架，二次创作者很难用沟通记录抗辩。</div>
+      </details>
+      <details class="faq">
+        <summary>看到“已被平台封禁”的说法怎么核？</summary>
+        <div class="ans">先找平台公示页或处理编号，再核对账号当前状态。限流、禁言、封禁是三种不同处置，时长从 7 天到永久不等。只有截图没有编号的，按转述处理；账号仍能正常搜到的，“封禁”说法多半不成立。</div>
+      </details>
+    </section>
+
+    <section id="comments">
+      <div class="shead">
+        <h2>用户评论<small>来自站内条目页，保留原话，含质疑与反对</small></h2>
+      </div>
+      <div class="cmts">
+        <div class="cmt">
+          <div class="who"><span class="av">周</span>周姓投放经理 · 11-07</div>
+          <p>青梧那场我司也报过价，<span class="obj">8 万坑位费</span>在女装里算中位。真要说问题，是他们详情页的尺码表一直没更新，退货高不奇怪。</p>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="av">林</span>林 · 11-06</div>
+          <p>把预售单剔掉再算退货率，这个操作我保留意见。预售也是成交，凭什么不进分母。</p>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="av">陈</span>陈同学 · 11-05</div>
+          <p><span class="obj">“老范探吃”停更 17 天</span>这事，他上次断更 9 天是去拍品牌年框，这次简介写“休整中”，估计也在谈合作。猜的，别当真。</p>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="av">何</span>何 · 11-04</div>
+          <p>这篇的核对表做得还行。就是“中段三”拿南枝来比，客单价差一倍，可比性有点勉强。</p>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="av">赵</span>赵女士 · 11-03</div>
+          <p>我在<span class="obj">阿岚直播间</span>买过一件风衣，收到色差明显，退了。整个流程没人为难我，退款两天到账。所以看到“刷单”两个字我觉得过了。</p>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="av">吴</span>吴 · 11-02</div>
+          <p>别的不说，<span class="obj">“糖糖手作”新号首场 1.1 万在线</span>，老号 87 万粉一个没带过去，这数据不太像自然迁移。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="news">
+      <div class="shead">
+        <h2>相关资讯<small>同领域其他动作，与上方条目无重复</small></h2>
+      </div>
+      <div class="grid g3">
+        <div class="card">
+          <div class="meta">平台规则 · 11-01</div>
+          <h3>抖音修订创作者管理总则</h3>
+          <p>2026 年 9 月版新增“引导退款后重新下单”条款，10 月起执行。适用于刷单判定，不涉及普通高退货率。</p>
+        </div>
+        <div class="card">
+          <div class="meta">行业数据 · 10-30</div>
+          <h3>女装直播客单价回升至 289 元</h3>
+          <p>第三方监测给出的 10 月中位数。客单价上行同时，退货决策周期从 3 天延长到 5 天以上，取数窗口因此更关键。</p>
+        </div>
+        <div class="card">
+          <div class="meta">品牌动作 · 10-26</div>
+          <h3>三家女装品牌改为按确认收货结算</h3>
+          <p>结算方式从支付口径改为确认收货口径，坑位费相应下调。改动直接影响退货率在合作谈判中的权重。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="related">
+      <div class="shead">
+        <h2>相关推荐<small>顺着证据链往下看</small></h2>
+      </div>
+      <div class="chips">
+        <a href="/#analysis">直播退货率口径对照</a>
+        <a href="/#guide">后台截图时间戳核查</a>
+        <a href="/#picks">阿岚的衣帽间专场条目</a>
+        <a href="/#latest">老范探吃停更记录</a>
+        <a href="/#timeline">青梧事件时间线</a>
+        <a href="/#guide">账号实名与合同归属</a>
+        <a href="/#faq">切片二创授权范围</a>
+        <a href="/#overview">平台处罚类型说明</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1d242b"/><path d="M13 45 L26 17 L39 45 Z" fill="none" stroke="#e0b252" stroke-width="3"/><circle cx="47" cy="25" r="9" fill="none" stroke="#b8443c" stroke-width="3"/><path d="M41 43 h18" stroke="#e0b252" stroke-width="3"/></svg>
+          <span>全球黑网</span>
+        </div>
+        <p>把账号争议留在可核对的层面：谁在何时说了什么，材料出自哪里。</p>
+        <p>资料类型：示例条目与公开平台公告整理，人物、品牌、数字均为演示用。</p>
+      </div>
+      <div>
+        <h4>频道</h4>
+        <a href="/#overview">行业概览</a>
+        <a href="/#picks">精选爆料</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#channels">频道索引</a>
+      </div>
+      <div>
+        <h4>查证</h4>
+        <a href="/#analysis">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#timeline">事件时间线</a>
+        <a href="/#faq">常见问题</a>
+      </div>
+      <div>
+        <h4>互动</h4>
+        <a href="/#comments">用户评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#related">相关推荐</a>
+        <a href="/#top">回到顶部</a>
+      </div>
+    </div>
+    <div class="fbottom">
+      <span>© 2026 全球黑网 · 内容为示例数据，不构成对任何真实主体的指控</span>
+      <span>页面正文更新核对项：11-07 阿岚退货口径说明、11-06 青梧坑位费公布</span>
+    </div>
+  </div>
+</footer>
+
+<button id="totop" type="button" aria-label="回到顶部">↑ 顶部</button>
+
+<script>
+(function(){
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('nav');
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 720){
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    }
+  });
+
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('q');
+  var msg = document.getElementById('searchmsg');
+  function strip(s){ return (s||'').replace(/\s+/g,''); }
+  function doSearch(){
+    var q = strip(input.value);
+    if(!q){
+      msg.style.display='none'; msg.textContent='';
+      return;
+    }
+    var nodes = document.querySelectorAll('main h1, main h2, main h3, main p, main li, main summary, footer p');
+    var hit = null;
+    for(var i=0;i<nodes.length;i++){
+      if(strip(nodes[i].textContent).indexOf(q) > -1){ hit = nodes[i]; break; }
+    }
+    if(hit){
+      var sec = hit.closest('section');
+      var target = sec ? sec : hit;
+      if(sec && sec.id){
+        location.hash = sec.id;
+        msg.style.display='block';
+        msg.style.color = 'var(--teal)';
+        msg.textContent = '已定位到含“' + input.value + '”的栏目。';
+      } else {
+        hit.scrollIntoView({behavior:'smooth', block:'center'});
+        msg.style.display='block';
+        msg.style.color = 'var(--teal)';
+        msg.textContent = '已定位到含“' + input.value + '”的内容。';
+      }
+      msg.style.color = 'var(--teal)';
+    } else {
+      msg.style.display='block';
+      msg.style.color = 'var(--red)';
+      msg.textContent = '没有找到“' + input.value + '”。可试试“退货率”“坑位费”“账号归属”“切片授权”。';
+    }
+  }
+  form.addEventListener('submit', function(e){ e.preventDefault(); doSearch(); });
+  document.getElementById('searchBtn').addEventListener('click', doSearch);
+
+  var top = document.getElementById('totop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 480){ top.classList.add('show'); } else { top.classList.remove('show'); }
+  }, {passive:true});
+  top.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"全球黑网",
+  "inLanguage":"zh-CN",
+  "description":"聚焦网红爆料与账号生态的条目化记录站点，收录带货履约、数据真实性、合约纠纷与平台处罚的可核对材料。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"直播退货率多少算异常？","acceptedAnswer":{"@type":"Answer","text":"女装类目行业公开区间多在 30% 至 50%，超过 60% 值得追问，但单一数字不构成异常判定。要看退货原因：尺码不合、色差属于商品与详情页问题；下单后两小时内集中退款，更可能来自价格对比或冲动下单。平台规则里没有退货率红线，处罚只针对虚假交易。"}},
+    {"@type":"Question","name":"凌晨涨粉 12 万一定是刷量吗？","acceptedAnswer":{"@type":"Answer","text":"不一定。同城页推荐、平台活动流量包、大号连麦都可能带来夜间集中涨粉。判定刷量的常见辅助证据是新增粉丝的账号质量：无头像、零作品、注册时间集中在同一天。只有涨粉曲线而没有粉丝质量样本时，只能标记为待核。"}},
+    {"@type":"Question","name":"解约后账号到底归谁？","acceptedAnswer":{"@type":"Answer","text":"账号归属由三层决定：平台实名认证信息、注册手机号控制权、合同中的归属条款。三者冲突时，平台通常以实名信息为准办理变更，但变更需要双方配合。合同写归机构而实名未变更的，机构往往只能主张违约赔偿，拿不回账号控制权。"}},
+    {"@type":"Question","name":"坑位费在退货后能退吗？","acceptedAnswer":{"@type":"Answer","text":"取决于合同是否约定保底条款。固定坑位费模式下，退货不触发返还；阶梯返还模式下，按确认收货金额计算返还比例。签约时没写返还机制的，事后主张退款缺少合同依据，只能走协商。"}},
+    {"@type":"Question","name":"直播切片二创需要书面授权吗？","acceptedAnswer":{"@type":"Answer","text":"需要。主播与机构的合同附件通常约定切片使用范围，口头同意或聊天记录里的可以剪不等于书面许可。平台投诉时，版权方提交权属证明即可要求下架，二次创作者很难用沟通记录抗辩。"}},
+    {"@type":"Question","name":"看到已被平台封禁的说法怎么核？","acceptedAnswer":{"@type":"Answer","text":"先找平台公示页或处理编号，再核对账号当前状态。限流、禁言、封禁是三种不同处置，时长从 7 天到永久不等。只有截图没有编号的，按转述处理；账号仍能正常搜到的，封禁说法多半不成立。"}}
+  ]
+}
+</script>
+</body>
+                                                                                                                                                                                             </html>
